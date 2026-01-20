@@ -1,6 +1,8 @@
 
 [build]
-  command = "echo 'Building WORM GPT Native...'"
+  # Perintah ini akan mengganti text 'REPLACE_WITH_NETLIFY_KEY' di index.html dengan value dari Environment Variable 'API_KEY'
+  # Pastikan Anda sudah set 'API_KEY' di Netlify -> Site Settings -> Environment Variables
+  command = "sed -i \"s|REPLACE_WITH_NETLIFY_KEY|${API_KEY}|g\" index.html"
   publish = "."
 
 [[redirects]]

@@ -31,13 +31,13 @@
         }
       }
 
-      // Polyfill for process.env to allow Netlify Env Vars or prevent crash
+      // Polyfill for process.env to allow Netlify Env Vars injection
       window.process = {
         env: {
           NODE_ENV: 'production',
-          // Note: Real Netlify Env Vars are injected at build time if using a bundler.
-          // For runtime/browser-only, they must be manually populated or replaced.
-          // This placeholder prevents crashes.
+          // Placeholder string ini akan diganti oleh perintah 'sed' di netlify.toml saat deploy.
+          // Jangan ubah string 'REPLACE_WITH_NETLIFY_KEY' ini kecuali Anda mengubah juga di netlify.toml
+          API_KEY: 'REPLACE_WITH_NETLIFY_KEY'
         }
       };
     </script>

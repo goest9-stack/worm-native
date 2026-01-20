@@ -81,9 +81,11 @@ const App: React.FC = () => {
     let envKey = '';
     try {
         // @ts-ignore
-        if (typeof process !== 'undefined' && process.env && process.env.API_KEY) {
+        const pEnv = typeof process !== 'undefined' ? process.env : {};
+        // @ts-ignore
+        if (pEnv.API_KEY && !pEnv.API_KEY.includes('REPLACE_WITH_NETLIFY_KEY')) {
             // @ts-ignore
-            envKey = process.env.API_KEY;
+            envKey = pEnv.API_KEY;
         }
     } catch (e) {
         console.warn("[SYSTEM]: Env access denied.");
