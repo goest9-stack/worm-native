@@ -1,6 +1,7 @@
+
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Message } from '../types';
+import { Message } from '../types.ts';
 import { Bot, User, Copy, Share2, Volume2, ShieldAlert } from 'lucide-react';
 
 interface MessageItemProps {

@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
-import { Button } from './Button';
+import { Button } from './Button.tsx';
 import { X, Check, Wallet, Smartphone, Copy, MessageCircle, Key, Shield } from 'lucide-react';
-import { PAYMENT_CONFIG, LICENSE_KEY } from '../constants';
+import { PAYMENT_CONFIG, LICENSE_KEY } from '../constants.ts';
 
 interface PaymentModalProps {
   isOpen: boolean;

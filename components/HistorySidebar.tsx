@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { X, MessageSquare, Trash2, Clock, Search } from 'lucide-react';
-import { ChatSession, AuthUser } from '../types';
+import { ChatSession, AuthUser } from '../types.ts';
 
 interface HistorySidebarProps {
   isOpen: boolean;

@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from './Button.tsx';
 import { Terminal, Plus, Trash2, X, Save } from 'lucide-react';
-import { CustomCommand } from '../types';
+import { CustomCommand } from '../types.ts';
 
 interface CommandModalProps {
   isOpen: boolean;

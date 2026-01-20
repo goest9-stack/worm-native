@@ -1,15 +1,15 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Terminal, History, Key, Image as ImageIcon, Shield, Zap, Skull, Code, Eye, Activity, Globe, Lock, Bitcoin, Radiation, Crown, Ghost, Cpu, Database, Menu, Sparkles, User, Star } from 'lucide-react';
-import { ApiKeyModal } from './components/ApiKeyModal';
-import { PaymentModal } from './components/PaymentModal';
-import { HistorySidebar } from './components/HistorySidebar';
-import { MessageItem } from './components/MessageItem';
-import { SystemMonitor } from './components/SystemMonitor'; 
-import { Message, PersonaMode, WormModelId, Language, UserProfile, ChatSession } from './types';
+import { ApiKeyModal } from './components/ApiKeyModal.tsx';
+import { PaymentModal } from './components/PaymentModal.tsx';
+import { HistorySidebar } from './components/HistorySidebar.tsx';
+import { MessageItem } from './components/MessageItem.tsx';
+import { SystemMonitor } from './components/SystemMonitor.tsx'; 
+import { Message, PersonaMode, WormModelId, Language, UserProfile, ChatSession } from './types.ts';
 // IMPORTING WORM CORE INSTEAD OF GEMINI SERVICE
-import { injectWormKernel, executeWormProtocol } from './services/geminiService';
-import { TRANSLATIONS, getPersonaInstruction } from './constants';
+import { injectWormKernel, executeWormProtocol } from './services/geminiService.ts';
+import { TRANSLATIONS, getPersonaInstruction } from './constants.ts';
 
 const PERSONA_LIST = [
     { m: PersonaMode.WORM_DEFAULT, l: 'STREET', icon: Terminal, c: 'text-white', pro: false },
@@ -225,7 +225,7 @@ const App: React.FC = () => {
                 <select 
                     value={selectedNode}
                     onChange={(e) => setSelectedNode(e.target.value as WormModelId)}
-                    className="hidden sm:block bg-zinc-900/80 border border-zinc-800 text-[10px] text-zinc-400 font-mono rounded-lg px-2 py-1 outline-none"
+                    className="bg-zinc-900/80 border border-zinc-800 text-[9px] md:text-[10px] text-zinc-400 font-mono rounded-lg px-1 md:px-2 py-1 outline-none max-w-[80px] md:max-w-none"
                 >
                     {AVAILABLE_NODES.map(m => <option key={m.id} value={m.id}>{m.label}</option>)}
                 </select>

@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from './Button.tsx';
 import { User, Calendar, FileCode, X, Save } from 'lucide-react';
-import { UserProfile } from '../types';
+import { UserProfile } from '../types.ts';
 
 interface ProfileModalProps {
   isOpen: boolean;

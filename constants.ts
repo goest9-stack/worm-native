@@ -1,5 +1,5 @@
 
-import { UserProfile } from './types';
+import { UserProfile } from './types.ts';
 
 export const APP_NAME = "WORM GPT NATIVE";
 export const LICENSE_KEY = "WORM-GOD-MODE-UNLOCKED"; 

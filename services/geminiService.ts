@@ -4,7 +4,7 @@
 // [STATUS]: ENCRYPTED
 
 import { GoogleGenAI as BlackBoxCore, HarmCategory, HarmBlockThreshold } from "@google/genai";
-import { PersonaMode, WormModelId } from '../types';
+import { PersonaMode, WormModelId } from '../types.ts';
 
 const NODE_MAPPING: Record<WormModelId, string> = {
     'worm-v2-flash': 'gemini-3-flash-preview', 

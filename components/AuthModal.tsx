@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { X, ShieldCheck } from 'lucide-react';
-import { AuthUser } from '../types';
+import { AuthUser } from '../types.ts';
 
 interface AuthModalProps {
   isOpen: boolean;
